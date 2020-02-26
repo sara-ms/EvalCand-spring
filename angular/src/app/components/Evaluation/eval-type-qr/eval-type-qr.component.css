@@ -1,0 +1,19 @@
+.background {
+  background-image: url(../../../../assets/img/abstract-vector-triangle-background-polygonal-network-pattern-abstract-vector-triangle-background-polygonal-network-pattern-blue-133773953.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+input {
+  height: 50px;
+  border-radius: 15px;
+  width: 100%;
+  color: blue;
+}
+input:hover {
+  background-color: #a9e5ef;
+}
+.mat-raised-button{
+  margin-left: 190px;
+}

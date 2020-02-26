@@ -1,0 +1,41 @@
+.evalBackground {
+  background-image: url(../../../../assets/img/abstract-vector-triangle-background-polygonal-network-pattern-abstract-vector-triangle-background-polygonal-network-pattern-blue-133773953.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+label {
+  font-size: 60px;
+  text-align: center;
+  color: #465a79;
+  font-family: Tekton Pro;
+  height: 150px;
+}
+p {
+  font-size: 40px;
+  font-family: Tekton Pro;
+  color: #465a79;
+  /* position: relative; */
+  /* top: 0;
+  opacity: 1; */
+  /* float: left; */
+  /* padding: 60px 50px 40px 50px; */
+}
+.btn {
+  background-color: #039be5;
+  border: 1px solid white;
+  border-radius: 5%;
+  color: white;
+  padding: 10px;
+  width: 250px;
+  height: 60px;
+  font-family: fantasy;
+  font-size: 25px;
+  margin-top: 220px;
+}
+span {
+  font-family: Tekton Pro;
+  color: #465a79;
+  font-size: 17px;
+}

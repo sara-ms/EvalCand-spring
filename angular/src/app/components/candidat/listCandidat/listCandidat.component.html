@@ -1,0 +1,27 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">List Candidats</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-3 text-primary">Nom</div>
+            <div class="col-3 text-primary">Prénom</div>
+            <div class="col-3 text-primary">Email</div>
+            <div class="col-3 text-primary">Niveau</div>
+          </div>
+          <div class="row" *ngFor="let cand of allCand">
+            <div class="col-3">{{ cand.nom }}</div>
+            <div class="col-3">{{ cand.prenom }}</div>
+            <div class="col-3">{{ cand.email }}</div>
+            <div class="col-3">{{ cand.niveau }}</div>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

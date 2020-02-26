@@ -1,0 +1,128 @@
+<div class="panel-header panel-header-lg" style="height: 0px;"></div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-lg">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">
+            <h1 style="text-align: center;">Bienvenue sur EvalCand</h1>
+          </h5>
+          <h4 class="card-title">
+            <p style="text-align: center;">
+              EvalCand est une platforme d'evaluation en ligne distiné aux
+              candidats de FivePoints
+            </p>
+          </h4>
+        </div>
+        <div class="card-footer">
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-6">
+              <button class="btnDash" routerLink="ajouter-Eval">
+                Créer evaluation
+              </button>
+            </div>
+          </div>
+          <button mdbBtn type="button" gradient="blue" rounded="true" mdbWavesEffect>
+            Blue
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card card-chart">
+        <div class="card-header">
+
+          <h4 class="card-title"> Evaluation</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  Titre
+                </th>
+                <th>
+                  Type Evaluation
+                </th>
+                <th>
+                  Niveau
+                </th>
+                <th class="text-right">
+
+                </th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let evaluation of evaluations">
+                  <td>
+                    {{ evaluation.titre }}
+                  </td>
+                  <td>
+                    {{ evaluation.etat  }}
+                  </td>
+                  <td>
+
+                  </td>
+                  <td>
+                    <button mat-button color="primary" (click)="DuplicateEval(evaluation)">Duplicate</button>
+                    <!-- <i class="material-icons">delete_forever</i>             -->
+
+                    <!-- <button mat-button color="primary"(click)= "UpdateEval(evaluation)" >Update</button> -->
+                    <!-- <button mat-button color="primary"(click)= "DeleteEval(evaluation)" >Delete</button> -->
+                  </td>
+                  <td class="text-right">
+
+                  </td>
+                </tr>
+              </tbody>
+
+            </table>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- <h5 class="card-category">lorem</h5>
+          <h4 class="card-title">lorem eval 1</h4>
+          <div ngbDropdown>
+            <button type="button" class="btn btn-round btn-default dropdown-toggle btn-simple btn-icon no-caret"
+              ngbDropdownToggle>
+              <i class="now-ui-icons loader_gear"></i>
+            </button>
+            <div ngbDropdownMenu class="dropdown-menu-right"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="chart-area">
+            <p>text</p>
+          </div>
+        </div> -->
+          <div class="card-footer">
+            <div class="stats">
+              <i class="now-ui-icons arrows-1_refresh-69"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

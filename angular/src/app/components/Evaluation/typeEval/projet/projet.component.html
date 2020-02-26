@@ -1,0 +1,46 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content">
+
+  <div class="card">
+    <div class="card-header">
+      <h5 class="title">Créer une evaluation de Projet</h5>
+      <button (click)="Return()">Retour</button>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="tp">
+        <div class="row" *ngFor="let control of tp['controls'].projet['controls']; let i = index;">
+
+          <div class="col-md-9">
+            <div formArrayName="projet">
+              <div [formGroupName]="i">
+                <label><b>Enoncé {{i+1}}</b></label>
+                <mat-form-field>
+                  <textarea matInput placeholder="Ajoutez votre énoncé" formControlName="enonce"></textarea>
+                  <mat-error *ngIf="tp['controls'].projet['controls'][i].hasError('required', 'enonce')">question
+                    is required</mat-error>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                  <input matInput type="text"  class="form-control" placeholder="lien Git">
+                  <mat-error *ngIf="tp['controls'].projet['controls'][i].hasError('required', 'lienGit')">Link is required             
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <i (click)="removePrj(i)" class="material-icons">delete</i>&nbsp;&nbsp;
+            <i (click)="addPrj()" mat-raised-button color="primary" class="material-icons">add_box</i>
+          </div>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-md-6"></div>        
+        <div class="col-md-6">
+          <button mat-raised-button  (click)="enregistrer()">Enregistrer</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,102 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="title">
+            Modifier profile Coach
+          </h2>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-md-6 px-1">
+                <div class="form-group">
+                  <label>Nom</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Nom"
+                    value="{{ coach.Nom }}"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6 px-1">
+                <div class="form-group">
+                  <label>Prénom</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Prénom"
+                    value="{{ coach.Prenom }}"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label>username</label>
+                  <input
+                    name="username"
+                    id="username"
+                    type="text"
+                    class="form-control"
+                    placeholder="username"
+                    value="{{ coach.Username }}"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label>Password</label>
+                  <input
+                    name="password"
+                    id="password"
+                    type="password"
+                    class="form-control"
+                    placeholder="password"
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer button-container ">
+          <button mat-raised-button>
+            Modifier
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-user">
+        <div class="card-header">
+          <h2 class="title">Coach detail</h2>
+        </div>
+        <div class="card-body">
+          <h3 class="title" style="text-align: center;">
+            Nom : {{ coach.Nom }}
+          </h3>
+          <br />
+          <h3 class="title" style="text-align: center;">
+            Prénom : {{ coach.Prenom }}
+          </h3>
+
+          <p class="description text-center"></p>
+        </div>
+        <hr />
+        <div class="button-container">
+          <button href="#" class="btn btn-neutral btn-icon btn-round ">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+          <button href="#" class="btn btn-neutral btn-icon btn-round ">
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button href="#" class="btn btn-neutral btn-icon btn-round ">
+            <i class="fab fa-google-plus-g"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

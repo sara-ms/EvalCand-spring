@@ -1,0 +1,68 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content">
+
+  <div class="card">
+    <div class="card-header">
+      <h5 class="title">Créer QR</h5>
+      <button (click)="Return()">Retour</button>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="tp">
+        <div  formArrayName="skills" >
+          <div  *ngFor="let control of tp['controls'].skills['controls']; let i = index;">
+          <div class="row" [formGroupName]="i" >
+            <div class="col-md-9 ">
+              <div>
+                  <label><b>Enoncé {{i+1}}</b></label>
+                  <mat-form-field>
+                    <textarea matInput placeholder="Ajoutez votre énoncé" formControlName="question"></textarea>
+                    <mat-error *ngIf="tp['controls'].skills['controls'][i].hasError('required', 'question')">question
+                      is required</mat-error>
+                  </mat-form-field>
+                  <br>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <i (click) ="removeSkill(i)"  class="material-icons">delete_forever</i>&nbsp;&nbsp;            
+              <i (click)="addQR()" mat-raised-button color="primary" class="material-icons">add_box</i>
+            </div>
+          </div>
+        </div>
+          
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-md-6"></div>        
+        <div class="col-md-6">
+          <button mat-raised-button  (click)= "enregistrer()">Enregistrer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row" *ngIf="isShown" class="row container-fluid" id="divshow">
+
+
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="title">Question reponse</h5>
+
+      </div>
+      <div class="card-body">
+        <div>
+          <div class="row">
+
+            <div class="col-md-8 px-1">
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
