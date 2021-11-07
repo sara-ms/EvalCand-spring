@@ -82,5 +82,4 @@ public class Codage {
 		return "Codage [Id_Codage=" + Id_Codage + ", Titre=" + Titre + ", enonce=" + enonce + ", reponse=" + reponse
 				+ ", ReponseCandidat=" + ReponseCandidat + ", evaluation=" + evaluation + "]";
 	}
-
 }
