@@ -43,7 +43,7 @@ export class ProjetComponent implements OnInit {
       titre: this.object.titre,
       etat: this.object.etat,
       duree: this.object.duree,
-      prj: this.tp.value.projet
+      projet: this.tp.value.projet
     };
     this.evalService.addEvaluationPrj(this.obj).subscribe(data => {
       console.log(this.obj);

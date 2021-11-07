@@ -30,7 +30,7 @@ const routes: Routes = [
   { path: "eval-candidat", component: EvalCandidatComponent },
   { path: "forget-password/:id", component: ForgetPasswordComponent },
   { path: "sendEmail", component: SendEmailComponent },
-  { path: "evalQR", component: EvalTypeQRComponent },
+  { path: "typeEvalQr", component: EvalTypeQRComponent },
   {
     path: "",
     component: StructureComponent,
@@ -44,7 +44,6 @@ const routes: Routes = [
       { path: "update-password", component: UpdatePasswordComponent },
       { path: "projet", component: ProjetComponent },
       { path: "edit", component: EditEvalComponent }
-
     ]
   }
 ];

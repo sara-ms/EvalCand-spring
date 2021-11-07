@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { EvaluationService } from "../../../Services/evaluation.service";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-eval-type-qr",
@@ -19,23 +20,20 @@ export class EvalTypeQRComponent implements OnInit {
       reponse4: "tunis"
     },
 
-{
-  question: "how old are you",
-  reponse1: "11",
-  reponse2: "19",
-  reponse3: "25",
-  reponse4: "35"
-}
+    {
+      question: "how old are you",
+      reponse1: "11",
+      reponse2: "19",
+      reponse3: "25",
+      reponse4: "35"
+    }
   ];
-  constructor(private evalService: EvaluationService) {}
+  constructor(
+    private evalService: EvaluationService,
+    private activateRoute: ActivatedRoute
+  ) {}
 
-  ngOnInit() {
-
-this.evalService.start().subscribe(data => {
-  console.log(data);
-
-});
-}
+  ngOnInit() {}
   next() {
     this.i = this.i + 1;
     this.j = this.j + 1;
@@ -45,13 +43,10 @@ this.evalService.start().subscribe(data => {
     this.j = this.j - 1;
   }
 
-  displayEvaluation(id) {
+  displayEvaluation() {
     this.evalService.displayEval().subscribe(data => {
       console.log(data);
       this.listQR = data;
     });
-  }
-  start(){
-
   }
 }

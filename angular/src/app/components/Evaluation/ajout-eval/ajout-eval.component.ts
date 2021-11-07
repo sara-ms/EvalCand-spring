@@ -11,7 +11,7 @@ import {
   FormControlName
 } from "@angular/forms";
 import { Router, ActivatedRoute } from "@angular/router";
-import { EvaluationService } from '../../../Services/evaluation.service';
+import { EvaluationService } from "../../../Services/evaluation.service";
 
 @Component({
   selector: "app-ajout-eval",
@@ -19,26 +19,33 @@ import { EvaluationService } from '../../../Services/evaluation.service';
   styleUrls: ["./ajout-eval.component.css"]
 })
 export class AjoutEvalComponent implements OnInit {
-
   evalForm: FormGroup;
   Types = ["qr", "Projet", "QCM"];
   chosenType: string;
   evaluationToEdit: any;
   isInitialized: boolean = false;
 
-  constructor(private router: Router,  private evalservice: EvaluationService) {
+  constructor(private router: Router, private evalservice: EvaluationService) {
     this.chosenType = "";
   }
 
   ngOnInit(): void {
-
     this.evaluationToEdit = this.evalservice.getEvaluation();
     this.evalservice.setEvaluation(null);
 
     this.evalForm = new FormGroup({
-      titre: new FormControl(this.evaluationToEdit != null ? this.evaluationToEdit.titre : "", [Validators.required]),
-      etat: new FormControl(this.evaluationToEdit != null ? this.evaluationToEdit.etat : "Activée", [Validators.required]),
-      duree: new FormControl(this.evaluationToEdit != null ? this.evaluationToEdit.duree : 0, [Validators.required])
+      titre: new FormControl(
+        this.evaluationToEdit != null ? this.evaluationToEdit.titre : "",
+        [Validators.required]
+      ),
+      etat: new FormControl(
+        this.evaluationToEdit != null ? this.evaluationToEdit.etat : "Activée",
+        [Validators.required]
+      ),
+      duree: new FormControl(
+        this.evaluationToEdit != null ? this.evaluationToEdit.duree : 0,
+        [Validators.required]
+      )
     });
   }
 
@@ -49,11 +56,9 @@ export class AjoutEvalComponent implements OnInit {
     console.log(event);
     this.chosenType = "";
   }
-  Save(evaluation){
+  Save(evaluation) {
     this.evalservice.Save(evaluation).subscribe(data => {
       console.log(data);
-  
-});
+    });
   }
 }
-

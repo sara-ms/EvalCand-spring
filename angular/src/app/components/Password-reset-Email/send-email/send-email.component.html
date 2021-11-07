@@ -12,9 +12,11 @@
             placeholder="saisie votre email"
             [formControl]="emailSend"
           />
-          <!-- <div *ngIf=" emailSend.email.errors">
-            <div *ngIf="emailSend.email.errors.required">Email is required</div>
-            <div *ngIf="emailSend.email.errors.email">
+          <!-- <div *ngIf="emailSend?.email?.errors">
+            <div *ngIf="emailSend?.email?.errors.required">
+              Email is required
+            </div>
+            <div *ngIf="emailSend?.email?.errors.email?">
               Email must be a valid email address
             </div>
           </div> -->

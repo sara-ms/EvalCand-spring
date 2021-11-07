@@ -10,7 +10,23 @@
   font-size: 25px;
   margin-left: 70px;
 }
- .text-primary{
+/* .text-primary {
   color: var(--info) !important;
+} */
+.card-body {
+  font-size: 20px;
+  line-height: 50px;
+}
+.menu {
+  font-size: 17px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
 
+.modal-dialog {
+  width: 800px;
+}
+hr {
+  border: 1px solid gainsboro;
+  width: 97%;
 }
