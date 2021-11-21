@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: "sign-in", component: SignInComponent },
   { path: "eval-candidat", component: EvalCandidatComponent },
   { path: "forget-password/:id", component: ForgetPasswordComponent },
-  { path: "sendEmail", component: SendEmailComponent },
+  { path: "sendEmail/:type", component: SendEmailComponent },
   { path: "typeEvalQr", component: EvalTypeQRComponent },
   {
     path: "",

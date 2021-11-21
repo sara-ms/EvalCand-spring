@@ -72,7 +72,7 @@ public class EmailService {
 		mail.setTo(candidat.getEmail());
 		mail.setSubject("Quiz Time");
 		mail.setText(" hey there...we have a test for you..when you are ready you can follow the link below"
-				+ " http://localhost:4200/typeEvalQr/");
+				+ " http://localhost:4200/typeEvalQr");
 
 		/*
 		 * This send() contains an Object of SimpleMailMessage as an Parameter
